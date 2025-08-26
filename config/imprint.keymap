@@ -83,14 +83,14 @@
 
         mouse {
             bindings = <
-&none  &none                    &none                   &none               &none                    &none                         &none  &none          &none              &none      &none            &none
-&none  &none                    &kp LA(LC(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &kp LA(LC(RIGHT_ARROW))  &kp LG(RIGHT_ARROW)           &none  &none          &none              &none      &none            &none
-&none  &kp LA(LC(LS(TAB)))      &mkp LCLK               &msc SCRL_UP        &mkp RCLK                &none                         &none  &mkp LCLK      &msc SCRL_UP       &mkp RCLK  &none            &none
-&none  &kp LS(LA(LC(LG(TAB))))  &none                   &msc SCRL_DOWN      &none                    &none                         &none  &none          &msc SCRL_DOWN     &none      &none            &kp ENTER
-&none  &none                    &none                   &none               &none                    &none                         &none  &none          &none              &none      &none            &none
-&none  &kp LEFT_SHIFT           &kp LCTRL               &kp LEFT_COMMAND    &kp LEFT_ALT                                                  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RCTRL  &kp RIGHT_SHIFT  &none
-                                                                            &mo 6                    &none                &none    &none  &none          &mo 6
-                                                                            &none                    &none                &none    &none  &none          &none
+&none  &none                    &none                   &none               &none                    &none                         &none      &none          &none              &none      &none            &none
+&none  &none                    &kp LA(LC(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &kp LA(LC(RIGHT_ARROW))  &kp LG(RIGHT_ARROW)           &none      &none          &none              &none      &none            &none
+&none  &kp LA(LC(LS(TAB)))      &mkp LCLK               &msc SCRL_UP        &mkp RCLK                &none                         &mkp RCLK  &mkp LCLK      &msc SCRL_UP       &mkp RCLK  &none            &none
+&none  &kp LS(LA(LC(LG(TAB))))  &none                   &msc SCRL_DOWN      &none                    &none                         &none      &none          &msc SCRL_DOWN     &none      &none            &kp ENTER
+&none  &none                    &none                   &none               &none                    &none                         &none      &none          &none              &none      &none            &none
+&none  &kp LEFT_SHIFT           &kp LCTRL               &kp LEFT_COMMAND    &kp LEFT_ALT                                                      &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RCTRL  &kp RIGHT_SHIFT  &none
+                                                                            &mo 6                    &none                &none    &none      &mkp LCLK      &mo 6
+                                                                            &none                    &none                &none    &none      &none          &none
             >;
         };
 
@@ -132,10 +132,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 1>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
