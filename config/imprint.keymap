@@ -59,9 +59,9 @@
             bindings = <
 &none  &none           &none      &none             &none         &none                   &none                  &none                  &none                  &none                  &none            &none
 &none  &none           &none      &none             &none         &none                   &none                  &none                  &none                  &none                  &none            &none
-&none  &none           &kp LG(W)  &none             &kp LG(R)     &kp LG(T)               &kp RS(RA(RC(RG(Y))))  &kp RS(RA(RC(RG(U))))  &kp RS(RA(RC(RG(I))))  &kp RS(RA(RC(RG(O))))  &none            &none
-&none  &kp LG(A)       &none      &none             &none         &kp LC(GRAVE)           &kp RS(RA(RC(RG(H))))  &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))  &kp RS(RA(RC(RG(L))))  &none            &none
-&none  &kp Z           &kp LG(X)  &kp LG(C)         &kp LG(V)     &none                   &none                  &kp RS(RA(RC(RG(M))))  &none                  &none                  &none            &none
+&none  &none           &kp LC(W)  &none             &kp LC(R)     &kp LC(T)               &kp RS(RA(RC(RG(Y))))  &kp RS(RA(RC(RG(U))))  &kp RS(RA(RC(RG(I))))  &kp RS(RA(RC(RG(O))))  &none            &none
+&none  &kp LC(A)       &none      &none             &none         &kp LC(GRAVE)           &kp RS(RA(RC(RG(H))))  &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))  &kp RS(RA(RC(RG(L))))  &none            &none
+&none  &kp Z           &kp LC(X)  &kp LC(C)         &kp LC(V)     &none                   &none                  &kp RS(RA(RC(RG(M))))  &none                  &none                  &none            &none
 &none  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_COMMAND  &kp LEFT_ALT                                                 &kp RIGHT_ALT          &kp RIGHT_COMMAND      &kp RCTRL              &kp RIGHT_SHIFT  &none
                                                     &none         &none          &none    &none                  &none                  &none
                                                     &none         &none          &none    &none                  &none                  &none
@@ -132,10 +132,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 100 1>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
