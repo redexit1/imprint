@@ -11,7 +11,7 @@
 };
 
 / {
-    chosen { zmk,matrix-transform = &imprint_function_row_full_bottom_row; };
+    chosen { zmk,physical-layout = &physical_layout_imprint_number_row; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -31,7 +31,6 @@
 
         Symbol {
             bindings = <
-&none    &none         &none         &none         &none         &none                &none   &none          &none                 &none                  &none             &none
 &kp F12  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5               &kp F6  &kp F7         &kp F8                &kp F9                 &kp F10           &kp F11
 &none    &kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER            &none   &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &none
 &none    &kp NUMBER_0  &kp N4        &kp N5        &kp N6        &kp COMMA            &none   &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp ENTER
@@ -44,7 +43,6 @@
 
         Nav {
             bindings = <
-&none        &none           &none              &none             &none            &none                   &none          &none              &none              &none            &none            &none
 &none        &none           &kp LC(LS(TAB))    &none             &kp LC(TAB)      &kp LC(R)               &none          &none              &none              &none            &none            &none
 &sys_reset   &kp TAB         &kp HOME           &kp UP_ARROW      &kp END          &kp PAGE_UP             &kp PAGE_UP    &kp HOME           &kp UP_ARROW       &kp END          &none            &none
 &bootloader  &kp LS(TAB)     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp PAGE_DOWN           &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT_ARROW  &none            &kp ENTER
@@ -58,7 +56,6 @@
         ctrl_shortcut {
             bindings = <
 &none  &none           &none      &none             &none         &none                   &none                  &none                  &none                  &none                  &none            &none
-&none  &none           &none      &none             &none         &none                   &none                  &none                  &none                  &none                  &none            &none
 &none  &none           &kp LC(W)  &none             &kp LC(R)     &kp LC(T)               &kp RS(RA(RC(RG(Y))))  &kp RS(RA(RC(RG(U))))  &kp RS(RA(RC(RG(I))))  &kp RS(RA(RC(RG(O))))  &none            &none
 &none  &kp LC(A)       &none      &none             &none         &kp LC(GRAVE)           &kp RS(RA(RC(RG(H))))  &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))  &kp RS(RA(RC(RG(L))))  &none            &none
 &none  &kp LC(Z)       &kp LC(X)  &kp LC(C)         &kp LC(V)     &none                   &none                  &kp RS(RA(RC(RG(M))))  &none                  &none                  &none            &none
@@ -71,7 +68,6 @@
         symbol_shift {
             bindings = <
 &none  &none           &none            &none             &none         &none           &none  &none          &none              &none             &none              &none
-&none  &none           &none            &none             &none         &none           &none  &none          &none              &none             &none              &none
 &none  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN       &kp HASH      &none           &none  &kp PLUS       &none              &none             &kp PIPE           &none
 &none  &none           &kp DOLLAR       &kp PERCENT       &kp CARET     &none           &none  &kp UNDER      &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp DOUBLE_QUOTES  &none
 &none  &none           &kp AMPERSAND    &kp ASTERISK      &none         &none           &none  &none          &kp LESS_THAN      &kp GREATER_THAN  &none              &none
@@ -83,7 +79,6 @@
 
         mouse {
             bindings = <
-&none  &none                    &none                   &none               &none                    &none                         &none      &none          &none              &none      &none            &none
 &none  &none                    &kp LA(LC(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &kp LA(LC(RIGHT_ARROW))  &kp LG(RIGHT_ARROW)           &none      &none          &none              &none      &none            &none
 &none  &kp LA(LC(LS(TAB)))      &mkp LCLK               &msc SCRL_UP        &mkp RCLK                &none                         &mkp RCLK  &mkp LCLK      &msc SCRL_UP       &mkp RCLK  &none            &none
 &none  &kp LS(LA(LC(LG(TAB))))  &none                   &msc SCRL_DOWN      &none                    &none                         &none      &none          &msc SCRL_DOWN     &none      &none            &kp ENTER
@@ -96,7 +91,6 @@
 
         meh {
             bindings = <
-&none  &none  &none                 &none                 &none                 &none                   &none          &none          &none          &none          &none          &none
 &none  &none  &kp LS(LC(NUMBER_2))  &kp LS(LC(NUMBER_3))  &kp LS(LC(NUMBER_4))  &none                   &none          &none          &none          &none          &none          &none
 &none  &none  &none                 &kp LS(LC(E))         &kp LS(LC(R))         &kp LS(LC(T))           &kp RS(RC(Y))  &kp RS(RC(U))  &kp RS(RC(I))  &kp RS(RC(O))  &kp RS(RC(P))  &none
 &none  &none  &kp LS(LC(S))         &kp LS(LC(D))         &kp LS(LC(F))         &kp LS(LC(G))           &none          &kp RS(RC(J))  &kp RS(RC(K))  &none          &none          &none
@@ -109,7 +103,6 @@
 
         factory_test {
             bindings = <
-&kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1
 &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7            &kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3
 &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9            &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
 &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1            &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7
