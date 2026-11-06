@@ -20,5 +20,8 @@
 include:
   - board: assimilator-bt
     shield: imprint_left
+    artifact-name: imprint_left_nick
+
   - board: assimilator-bt
     shield: imprint_right
+    artifact-name: imprint_right_nick
