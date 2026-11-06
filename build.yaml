@@ -16,10 +16,12 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
-------
+---
 include:
   - board: assimilator-bt
     shield: imprint_left
+    artifact-name: imprint_left_nick
 
   - board: assimilator-bt
     shield: imprint_right
+    artifact-name: imprint_right_nick
