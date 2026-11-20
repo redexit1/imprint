@@ -90,13 +90,13 @@
 
         meh {
             bindings = <
-&none  &none  &kp LS(LC(NUMBER_2))  &kp LS(LC(NUMBER_3))  &kp LS(LC(NUMBER_4))  &none                   &none          &none          &none          &none          &none          &none
-&none  &none  &none                 &kp LS(LC(E))         &kp LS(LC(R))         &kp LS(LC(T))           &kp RS(RC(Y))  &kp RS(RC(U))  &kp RS(RC(I))  &kp RS(RC(O))  &kp RS(RC(P))  &none
-&none  &none  &kp LS(LC(S))         &kp LS(LC(D))         &kp LS(LC(F))         &kp LS(LC(G))           &none          &kp RS(RC(J))  &kp RS(RC(K))  &none          &none          &none
-&none  &none  &none                 &none                 &none                 &kp LS(LC(B))           &kp RS(RC(N))  &none          &none          &none          &none          &none
-&none  &none  &none                 &none                 &none                                                        &none          &none          &none          &none          &none
-                                                          &none                 &none          &none    &none          &none          &none
-                                                          &none                 &none          &none    &none          &none          &none
+&none  &none              &kp LS(LC(NUMBER_2))  &kp LS(LC(NUMBER_3))  &kp LS(LC(NUMBER_4))  &none                   &none          &none          &none          &none          &none          &none
+&none  &kp LC(LA(GRAVE))  &none                 &kp LS(LC(E))         &kp LS(LC(R))         &kp LS(LC(T))           &kp RS(RC(Y))  &kp RS(RC(U))  &kp RS(RC(I))  &kp RS(RC(O))  &kp RS(RC(P))  &none
+&none  &none              &kp LS(LC(S))         &kp LS(LC(D))         &kp LS(LC(F))         &kp LS(LC(G))           &none          &kp RS(RC(J))  &kp RS(RC(K))  &none          &none          &none
+&none  &none              &none                 &none                 &none                 &kp LS(LC(B))           &kp RS(RC(N))  &none          &none          &none          &none          &none
+&none  &none              &none                 &none                 &none                                                        &none          &none          &none          &none          &none
+                                                                      &none                 &none          &none    &none          &none          &none
+                                                                      &none                 &none          &none    &none          &none          &none
             >;
         };
 
@@ -114,18 +114,15 @@
     };
 };
 
+// Right trackball: faster mouse cursor
 
- // Right trackball: faster mouse cursor
-&trackball_peripheral_listener {
-    input-processors =
-        <&zip_xy_scaler 2 1>;
-};
+&trackball_peripheral_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 // Left trackball: slower scrolling
+
 &trackball_central_listener {
     input-processors =
         <&zip_xy_scaler 1 1>,
         <&zip_xy_to_scroll_mapper>,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
-
