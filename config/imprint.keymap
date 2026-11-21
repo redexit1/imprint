@@ -42,7 +42,7 @@
 
         Nav {
             bindings = <
-&none        &none           &kp LC(LS(TAB))    &none             &kp LC(TAB)         &kp ENTER               &none          &none              &none              &none               &none            &none
+&none        &none           &kp LC(LS(TAB))    &kp ENTER         &kp LC(TAB)         &none                   &none          &none              &none              &none               &none            &none
 &sys_reset   &kp TAB         &kp LG(UP_ARROW)   &kp UP_ARROW      &kp LG(DOWN_ARROW)  &kp PAGE_UP             &kp PAGE_UP    &kp RG(UP_ARROW)   &kp UP_ARROW       &kp RG(DOWN_ARROW)  &none            &none
 &bootloader  &kp LS(TAB)     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW     &kp PAGE_DOWN           &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT_ARROW     &none            &kp ENTER
 &none        &none           &kp C_VOLUME_DOWN  &none             &kp C_VOLUME_UP     &none                   &trans         &kp C_VOLUME_DOWN  &none              &kp C_VOLUME_UP     &none            &none
